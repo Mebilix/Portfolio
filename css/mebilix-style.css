@@ -1,0 +1,139 @@
+/* Web Fonts ----------------------- */
+
+/* Main Colors --------------------- */
+
+:root {
+  --color-mbx-green: #4c5c0f;
+}
+
+/* Base Styles --------------------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1em; /* 16px on most screens */
+}
+
+.mbx-header {
+  display: flex;
+  min-height: 1rem;
+  background-color: var(--color-mbx-green);
+  margin: 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.mbx-navbar {
+  display: flex;
+}
+
+.mbx-navitem {
+  display: flex;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+
+body {
+  color: white;
+}
+
+.no-scroll {
+  overflow: hidden; /* Hide scrollbars */
+}
+
+.container-center {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Main Styles - Mebilix ------ */
+
+.moving-mud {
+  background: linear-gradient(-210deg, #401f0f, #200b01);
+	height: 100vh;
+}
+
+#centerlogo {
+  /* max-width: 200px; */
+  max-width: 65%;
+  min-height: 20vh;
+  margin-top: 30vh;
+}
+
+.glow{
+  transition: all 500ms;
+}
+
+.glow:hover {
+  transition: all 500ms;
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8);
+}
+
+.bar-center {
+  margin-top: 10vh;
+  max-width: 90%;
+  align-items: center;
+}
+
+.btn-bar-center {
+  margin-top: 10vh;
+  max-width: 70%;
+  align-items: center;
+}
+
+.iframe {
+  width: 90%;
+  height: 50vh;
+}
+
+.btn-green {
+  transition: all 500ms;
+  display: flex;
+  border-radius: 0.25em;
+  background-color: var(--color-mbx-green);
+  box-shadow: black;
+  text-align: center;
+  color: #c8d88a;
+  padding: 1em 2em;
+}
+
+.btn-green:hover {
+  transition: all 500ms;
+  background-color: #ab6c00;
+  color: #fff;
+}
+
+
+/* Media Queries ------------------- */
+
+@media screen and (min-width: 720px) {
+  #centerlogo {
+    max-width: 460px;
+  }
+
+  .btn-green {
+    font-size: 1.50em;
+  }
+
+  /* Animation Effects ------------- */
+  .moving-mud {
+    background: linear-gradient(-210deg, #200b01, #301304, #311507, #401f0f);
+  	background-size: 400% 400%;
+  	animation: gradient 20s ease infinite;
+  }
+
+  @keyframes gradient {
+  	0% {
+  		background-position: 0% 50%;
+  	}
+  	50% {
+  		background-position: 100% 50%;
+  	}
+  	100% {
+  		background-position: 0% 50%;
+  	}
+  }
+}
